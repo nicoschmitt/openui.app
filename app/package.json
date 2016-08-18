@@ -1,0 +1,10 @@
+{
+  "name": "openui.app",
+  "version": "0.0.1",
+  "description": "OpenUI App",
+  "author": "Nicolas Schmitt",
+  "main": "main.js",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
