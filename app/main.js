@@ -13,13 +13,22 @@ const BrowserWindow = electron.BrowserWindow
 
 let mainWindow
 
+var urls = {
+  dev: "http://localhost:8080",
+  staging: "http://openui.nicontoso.eu",
+  prod: "http://openpogoui.nicontoso.eu"
+};
+var url = urls.prod;
+if (process.argv.indexOf("--local") >= 0) {
+  url = urls.dev;
+} else if (process.argv.indexOf("--staging") >= 0) {
+  url = urls.staging;
+}
+
 function createWindow () {
   mainWindow = new BrowserWindow({width: 1200, height: 900})
 
-  var devurl = "http://localhost.nicontoso.eu:8080/?websocket=http://localhost.nicontoso.eu:8080";
-  var stagingurl = "http://openui.nicontoso.eu";
-  var produrl = "http://openpogoui.nicontoso.eu";
-  mainWindow.loadURL(devurl);
+  mainWindow.loadURL(url);
 
   mainWindow.on('closed', function () {
     mainWindow = null
@@ -40,3 +49,4 @@ app.on('activate', function () {
   }
 })
 
+require("./menu.js").register(urls);
