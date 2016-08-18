@@ -10,7 +10,8 @@
     "dist": "build --win --x64",
     "dist32": "build --win --ia32",
     "zip": "build --win zip --x64",
-    "zip32": "build --win zip --ia32"
+    "zip32": "build --win zip --ia32",
+    "mac": "build --mac"
   },
   "devDependencies": {
     "del": "^2.2.2",
