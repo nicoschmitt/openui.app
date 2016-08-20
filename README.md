@@ -1,3 +1,4 @@
+[![Dependency Status](https://www.versioneye.com/user/projects/57b8bb50090d4d004eda0435/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57b8bb50090d4d004eda0435)
 
 # OpenPogoUI - App Version
 
